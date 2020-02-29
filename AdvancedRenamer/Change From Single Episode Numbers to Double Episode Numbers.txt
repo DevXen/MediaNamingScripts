@@ -1,0 +1,57 @@
+To change from: 
+01 to 01-02
+02 to 03-04
+etc.
+
+name = item.name.match(/(.*)(\d{2})(.*)/);
+n = name[2];
+num1 = ("0" + (2*n-1)).slice(-2);
+num2 = ("0" + 2*n).slice(-2);
+return name[1] + num1 + "-" + num2 + name[3];
+
+----
+
+
+To change the range of added numbers you only need to replace "2" in the functions 2*n-1 & 2*n
+
+I've modified the script below - change the value of "m" to be equal to the range required.
+I've also modified the Regular Expression to extract the letter before the last number as a prefix to the new numbers, as in your example.
+
+The script will also accept characters after the numbers - as long as they don't include a pair of numerical digits.
+
+So with m = 2:
+S02E02qwerty -> S02E03-04qwerty
+
+and with m=3:
+S02E02qwerty -> S02E03-04qwerty
+
+
+
+m = 2;
+name = item.name.match(/(.*)(\w{1})(\d{2})(.*)/);
+app.log(name);
+prefix = name[2];
+app.log(prefix);
+n = name[3];
+num1 = prefix + ("0" + (m*(n-1)+1)).slice(-2);
+num2 = prefix + ("0" + m*n).slice(-2);
+return name[1] + num1 + "-" + num2 + name[4];
+
+-----
+
+Are you sure that you entered the script accurately? It works for me when I copy and paste it from my Forum post.
+
+The previous version will show all entries in the list as red if the match fails in any of the filenames, even though filenames that match are correctly renamed. I've corrected that problem in the version below by jumping out of the script if the match returns a null result.
+
+In this version you can set the prefix by changing the value in the statement: prefix = 'E';
+If you do not require to extract a prefix then set this to null - ie prefix = '';
+
+m = 2;
+prefix = 'E';
+regex = '(.*)' + prefix + '(\\d{2})(.*)';
+name = item.name.match(regex);
+if (name == null) {return};
+n = name[2];
+num1 = prefix + ("0" + (m*(n-1)+1)).slice(-2);
+num2 = prefix + ("0" + m*n).slice(-2);
+return name[1] + num1 + "-" + num2 + name[3];
