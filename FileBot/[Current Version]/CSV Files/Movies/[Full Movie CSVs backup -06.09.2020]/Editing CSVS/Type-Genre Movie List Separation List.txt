@@ -1,0 +1,55 @@
+
+TYPES:
+[Animation]/[3D Animated]/
+[Animation]/[Disney]/
+[Based on]/[Comic Books]/
+[Based on]/[Television]/
+[Based on]/[Toys]/
+[Based on]/[Video Games]/
+[Disney Movies]/
+[MindFuck]/
+[Mini-Series]/
+[Mockumentaries]/
+[Musicals]/
+[Musicals]/[Broadway]/
+[Set in Utah]/
+[Teen Movies]/
+[TV Movies]/[ABC Family]/
+[TV Movies]/[Disney Channel]/
+[TV Movies]/[Hallmark]/
+[TV Movies]/[Lifetime]/
+[TV Movies]/[Nickelodeon]/
+[TV Movies]/[SyFy]/
+
+
+
+
+GENRES:
+[Animation]/[Comics]/[DC]/
+[Animation]/[Comics]/[Marvel]/
+[Based on]/[Comic Books]/[DC]/
+[Based on]/[Comic Books]/[Marvel]/
+[Based on]/[Comic Books]/[Marvel]/[One-Shot]/
+[Based on]/[Comic Books]/[Motion Comics]/
+[Genres]/[Comedy]/[Broken Lizard]/
+[Genres]/[Comedy]/[Comedy Horror]/
+[Genres]/[Comedy]/[Dark Comdies]/
+[Genres]/[Comedy]/[Ernest P. Worrell]/
+[Genres]/[Comedy]/[National Lampoon]/
+[Genres]/[Comedy]/[Parodies]/
+[Genres]/[Comedy]/[Sex Comedies]/
+[Genres]/[Horror]/[Body Horror]/
+[Genres]/[Horror]/[Bug Horror]/
+[Genres]/[Horror]/[Classic Monsters]/
+[Genres]/[Horror]/[Clown Horror]/
+[Genres]/[Horror]/[Hyper-Violent]/
+[Genres]/[Horror]/[Religious Horror]/
+[Genres]/[Horror]/[Rock And Roll]/
+[Genres]/[Horror]/[Torture Porn]/
+[Genres]/[Horror]/[Vampires]/[Lesbian]/
+[Genres]/[Misc]/[Adult]/[BDSM]/
+[Genres]/[Misc]/[Adult]/[In]/
+[Genres]/[Misc]/[Adult]/[Softcore]/
+[Genres]/[Misc]/[Unsimulated]/
+[Genres]/[Thriller]/[Psychothriller]/
+[Musicals]/[Band Films]/
