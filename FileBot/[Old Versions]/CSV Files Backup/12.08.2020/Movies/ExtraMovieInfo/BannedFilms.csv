@@ -1,0 +1,1489 @@
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;
+Birth Control [1917];[Banned In United States]
+Convention City [1933];[Banned In United States]
+Die Blechtrommel [1979];[Banned In United States]
+Ecstasy [1933];[Banned In United States]
+Ekstase [1933];[Banned In United States]
+Flaming Creatures [1963];[Banned In United States]
+Häxan [1922];[Banned In United States]
+Hillary: The Movie [2008];[Banned In United States]
+I am Curious (Yellow) [1967];[Banned In United States]
+Jag är nyfiken - en film i gult [1967];[Banned In United States]
+Kiss Tomorrow Goodbye [1950];[Banned In United States]
+Life of Brian [1979];[Banned In United States]
+Lost Boundaries [1949];[Banned In United States]
+Monty Python's Life of Brian [1979];[Banned In United States]
+Obsession [1943];[Banned In United States]
+Ossessione [1943];[Banned In United States]
+Pink Flamingos [1972];[Banned In United States]
+Promises! Promises! [1963];[Banned In United States]
+Scarface [1932];[Banned In United States]
+Scarlet Street [1945];[Banned In United States]
+The Birth of a Nation [1915];[Banned In United States]
+The Last Temptation of Christ [1988];[Banned In United States]
+The Moon Is Blue [1953];[Banned In United States]
+The Profit [2001];[Banned In United States]
+The Thorn [1971];[Banned In United States]
+The Tin Drum [1979];[Banned In United States]
+The Vanishing Prairie [1954];[Banned In United States]
+The Yes Men Fix the World [2009];[Banned In United States]
+Titicut Follies [1967];[Banned In United States]
+Two-Faced Woman [1941];[Banned In United States]
+Victim [1961];[Banned In United States]
+Viva Maria! [1965];[Banned In United States]
+Witchcraft Through the Ages [1922];[Banned In United States]
+A Clockwork Orange [1971];[Banned In UK]
+Battleship Potemkin [1925];[Banned In UK]
+Bronenosets Potyomkin [1925];[Banned In UK]
+Cocksucker Blues [1972];[Banned In UK]
+Freaks [1932];[Banned In UK]
+Glen or Glenda [1953];[Banned In UK]
+Grotesque [2009];[Banned In UK]
+Gurotesuku [2009];[Banned In UK]
+Island of Lost Souls [1932];[Banned In UK]
+Maîtresse [1975];[Banned In UK]
+Mikey [1992];[Banned In UK]
+Mistress [1975];[Banned In UK]
+Reservoir Dogs [1992];[Banned In UK]
+The Evil Dead [1981];[Banned In UK]
+The Exorcist [1973];[Banned In UK]
+The Last House on the Left [1972];[Banned In UK]
+The Life Story of David Lloyd George [1918];[Banned In UK]
+The Save the Children Fund Film [1971];[Banned In UK]
+The Trip [1967];[Banned In UK]
+The Wild One [1953];[Banned In UK]
+Visions of Ecstasy [1989];[Banned In UK]
+¡Viva la muerte... tua! [1971];[Banned In Sweden]
+'Sheba, Baby' [1975];[Banned In Sweden]
+3:15 [1986];[Banned In Sweden]
+5 For Hell AKA Five for Hell [1969];[Banned In Sweden]
+5 per l'inferno [1969];[Banned In Sweden]
+A Kiss Before Dying [1956];[Banned In Sweden]
+A Long Ride from Hell [1968];[Banned In Sweden]
+A Man Called Blade [1977];[Banned In Sweden]
+A Man Called Django [1971];[Banned In Sweden]
+A Man Called Sledge [1970];[Banned In Sweden]
+A Man for Hanging [1972];[Banned In Sweden]
+A Man, a Horse, a Gun [1967];[Banned In Sweden]
+A Minute to Pray, a Second to Die [1968];[Banned In Sweden]
+A Nightmare on Elm Street 3: Dream Warriors [1987];[Banned In Sweden]
+Abigail Wanted [1978];[Banned In Sweden]
+Achtung! The Desert Tigers [1977];[Banned In Sweden]
+Across 110th Street [1972];[Banned In Sweden]
+Action immédiate [1957];[Banned In Sweden]
+Adios Sabata [1971];[Banned In Sweden]
+Agente Z 55 missione disperata [1965];[Banned In Sweden]
+Aldrig i livet [1957];[Banned In Sweden]
+American Ninja [1985];[Banned In Sweden]
+American Ninja 2: The Confrontation [1987];[Banned In Sweden]
+Ammazzali tutti e torna solo [1968];[Banned In Sweden]
+An Eye for an Eye [1981];[Banned In Sweden]
+Angel's Leap [1971];[Banned In Sweden]
+Angels Die Hard [1970];[Banned In Sweden]
+Angels Hard as They Come [1971];[Banned In Sweden]
+Atom Age Vampire [1960];[Banned In Sweden]
+Babes and Hoodlums [1957];[Banned In Sweden]
+Baby Face Nelson [1957];[Banned In Sweden]
+Bachelor Tom Peeping [1962];[Banned In Sweden]
+Backlash [1956];[Banned In Sweden]
+Baker County, U.S.A. [1982];[Banned In Sweden]
+Ballata per un pistolero [1967];[Banned In Sweden]
+Battle of the Amazons [1973];[Banned In Sweden]
+Beyond the Valley of the Dolls [1970];[Banned In Sweden]
+Big Bad Mama II [1987];[Banned In Sweden]
+Blindman [1971];[Banned In Sweden]
+Blood and Black Lace [1964];[Banned In Sweden]
+Blood of the Beasts [1949];[Banned In Sweden]
+Blood of the Vampire [1958];[Banned In Sweden]
+Bloodlust AKA Mosquito the Rapist [1977];[Banned In Sweden]
+Bloodsport [1988];[Banned In Sweden]
+Bluebeard's Ten Honeymoons [1960];[Banned In Sweden]
+Born American [1986];[Banned In Sweden]
+Born for Hell [1976];[Banned In Sweden]
+Brothers in Arms [1988];[Banned In Sweden]
+Bucktown [1975];[Banned In Sweden]
+Bullet in the Head [1990];[Banned In Sweden]
+Buta to gunkan [1961];[Banned In Sweden]
+C'est arrivé près de chez vous [1992];[Banned In Sweden]
+Cannibal Man [1972];[Banned In Sweden]
+Ce soir on tue [1959];[Banned In Sweden]
+Cell 2455 Death Row [1955];[Banned In Sweden]
+Circus of Horrors [1960];[Banned In Sweden]
+Clegg [1970];[Banned In Sweden]
+Cleopatra Jones and the Casino of Gold [1975];[Banned In Sweden]
+Coffin Full of Dollars [1971];[Banned In Sweden]
+Coffy [1973];[Banned In Sweden]
+Colli di cuoio [1989];[Banned In Sweden]
+Commando [1985];[Banned In Sweden]
+Creepshow 2 [1987];[Banned In Sweden]
+Crime Killer [1985];[Banned In Sweden]
+Cruel Story of Youth [1960];[Banned In Sweden]
+Curfew [1989];[Banned In Sweden]
+Curse of the Undead [1959];[Banned In Sweden]
+Dai nemici mi guardo io! [1969];[Banned In Sweden]
+Dang kou tan [1972];[Banned In Sweden]
+Dark Angel [1990];[Banned In Sweden]
+Dark of the Sun [1968];[Banned In Sweden]
+Day of the Outlaw [1959];[Banned In Sweden]
+Days of Sin and Nights of Nymphomania [1963];[Banned In Sweden]
+Dead Are Countless [1969];[Banned In Sweden]
+Dead Heat [1988];[Banned In Sweden]
+Death Weekend [1976];[Banned In Sweden]
+Death Wish 4: The Crackdown [1987];[Banned In Sweden]
+Deathsport [1978];[Banned In Sweden]
+Dementia 13 [1963];[Banned In Sweden]
+Der heiße Tod [1969];[Banned In Sweden]
+Des femmes disparaissent [1959];[Banned In Sweden]
+Devil in the Flesh AKA Venus in Furs [1969];[Banned In Sweden]
+Diao shou guai zhao [1973];[Banned In Sweden]
+Die Bande des Schreckens [1960];[Banned In Sweden]
+Die Halbstarken [1956];[Banned In Sweden]
+Die xue jie tou [1990];[Banned In Sweden]
+Dio, Sei Proprio Un Padreterno! [1973];[Banned In Sweden]
+Dip huet seung hung [1989];[Banned In Sweden]
+Django [1966];[Banned In Sweden]
+Doctor Blood's Coffin [1961];[Banned In Sweden]
+Don't Go Near the Park [1981];[Banned In Sweden]
+Don't Turn Out the Light [1987];[Banned In Sweden]
+Don't Turn the Other Cheek [1971];[Banned In Sweden]
+Dr. Cadman's Secret [1956];[Banned In Sweden]
+Dracula [1958];[Banned In Sweden]
+Drum [1976];[Banned In Sweden]
+Du bei dao wang [1969];[Banned In Sweden]
+Du rififi chez les femmes [1959];[Banned In Sweden]
+Duel in the Eclipse [1968];[Banned In Sweden]
+È tornato Sabata... hai chiuso un'altra volta [1971];[Banned In Sweden]
+El desperado [1967];[Banned In Sweden]
+El jorobado de la Morgue [1973];[Banned In Sweden]
+El kárate, el Colt y el impostor [1974];[Banned In Sweden]
+Enter the Dragon [1973];[Banned In Sweden]
+Enter the Ninja [1981];[Banned In Sweden]
+Exterminator 2 [1984];[Banned In Sweden]
+Eye of the Eagle [1987];[Banned In Sweden]
+Eye of the Tiger [1986];[Banned In Sweden]
+Ferocious AKA Beast With a Gun [1977];[Banned In Sweden]
+Fiend Without a Face [1958];[Banned In Sweden]
+Fight for Your Life [1977];[Banned In Sweden]
+Finders Keepers, Lovers Weepers! [1968];[Banned In Sweden]
+Fist of Fury AKA The Chinese Connection [1972];[Banned In Sweden]
+Five Fingers of Death AKA King Boxer [1972];[Banned In Sweden]
+Five Gates to Hell [1959];[Banned In Sweden]
+Force 5 [1981];[Banned In Sweden]
+Force: Five [1981];[Banned In Sweden]
+Forced Entry [1975];[Banned In Sweden]
+Fortress in the Sun [1975];[Banned In Sweden]
+Framed [1975];[Banned In Sweden]
+Frankenstein's Daughter [1958];[Banned In Sweden]
+Freebie and the Bean [1974];[Banned In Sweden]
+Friday the 13th Part III [1982];[Banned In Sweden]
+Friday the 13th: Part IV [1984];[Banned In Sweden]
+Friday the 13th: The Final Chapter [1984];[Banned In Sweden]
+From Beyond [1986];[Banned In Sweden]
+Future Hunters [1986];[Banned In Sweden]
+Gang War [1962];[Banned In Sweden]
+Garringo [1969];[Banned In Sweden]
+Girls Town [1959];[Banned In Sweden]
+Gli fumavano le Colt... lo chiamavano Camposanto [1971];[Banned In Sweden]
+Gritos en la noche [1962];[Banned In Sweden]
+Guns for Dollars AKA They Call Me Hallelujah [1971];[Banned In Sweden]
+Guns, Girls, and Gangsters [1959];[Banned In Sweden]
+Gunslinger [1956];[Banned In Sweden]
+Halloween 5: The Revenge of Michael Myers [1989];[Banned In Sweden]
+Hangmen [1987];[Banned In Sweden]
+Happy Birthday to Me [1981];[Banned In Sweden]
+Hard Boiled [1992];[Banned In Sweden]
+Hard Justice [1995];[Banned In Sweden]
+Hardcase and Fist [1989];[Banned In Sweden]
+Hell Camp [1986];[Banned In Sweden]
+Hell High [1989];[Banned In Sweden]
+Hexen bis aufs Blut gequält [1970];[Banned In Sweden]
+High Crime AKA Marsielles Connection [1973];[Banned In Sweden]
+High Plains Drifter [1973];[Banned In Sweden]
+Higher and Higher [1970];[Banned In Sweden]
+Homicidal [1961];[Banned In Sweden]
+Honeymoon of Terror [1961];[Banned In Sweden]
+Horror Hotel [1960];[Banned In Sweden]
+Horror of Dracula [1958];[Banned In Sweden]
+Horror Planet [1981];[Banned In Sweden]
+Horrors of the Black Museum [1959];[Banned In Sweden]
+Hot Summer Night [1957];[Banned In Sweden]
+House of Usher [1960];[Banned In Sweden]
+House on Haunted Hill [1959];[Banned In Sweden]
+Howling II: Stirba - Werewolf Bitch [1985];[Banned In Sweden]
+Huk! [1956];[Banned In Sweden]
+Hunchback of the Morgue [1973];[Banned In Sweden]
+I bastardi [1968];[Banned In Sweden]
+I Come in Peace [1990];[Banned In Sweden]
+I crudeli [1967];[Banned In Sweden]
+I mongoli [1961];[Banned In Sweden]
+I Protect Myself Against My Enemies [1969];[Banned In Sweden]
+I Spit on Your Grave [1959];[Banned In Sweden]
+I Was a Teenage Frankenstein [1957];[Banned In Sweden]
+Ich, ein Groupie [1970];[Banned In Sweden]
+If You Meet Sartana Pray for Your Death [1968];[Banned In Sweden]
+Il suo nome gridava vendetta [1968];[Banned In Sweden]
+Il Trono di fuoco [1970];[Banned In Sweden]
+Indio Black, sai che ti dico: Sei un gran figlio di... [1971];[Banned In Sweden]
+Inseminoid [1981];[Banned In Sweden]
+Inside the Mafia [1959];[Banned In Sweden]
+Invasion U.S.A. [1985];[Banned In Sweden]
+Iron Angels AKA Fighting Madam [1987];[Banned In Sweden]
+Island of Despair AKA 99 Women [1969];[Banned In Sweden]
+It Takes a Thief [1960];[Banned In Sweden]
+J'irai cracher sur vos tombes [1959];[Banned In Sweden]
+Jack Slade [1953];[Banned In Sweden]
+Jack the Ripper [1959];[Banned In Sweden]
+Jaguar Lives! [1979];[Banned In Sweden]
+Ji xiang du fang [1972];[Banned In Sweden]
+Jing wu men [1972];[Banned In Sweden]
+Joe MacBeth [1955];[Banned In Sweden]
+Johnny Cool [1963];[Banned In Sweden]
+Johnny Hamlet [1968];[Banned In Sweden]
+Kaput lager - gli ultimi giorni delle SS [1977];[Banned In Sweden]
+Key Witness [1960];[Banned In Sweden]
+Kickboxer 4: The Aggressor [1994];[Banned In Sweden]
+Kill Them All and Come Back Alone [1968];[Banned In Sweden]
+Kill! [1971];[Banned In Sweden]
+Kill! Kill! Kill! Kill! [1971];[Banned In Sweden]
+Killer Party [1986];[Banned In Sweden]
+Kuai huo lin [1972];[Banned In Sweden]
+L'amante del vampiro [1960];[Banned In Sweden]
+L'ammutinamento [1961];[Banned In Sweden]
+L'ultimo cacciatore [1980];[Banned In Sweden]
+La belva col mitra [1977];[Banned In Sweden]
+La diligencia de los condenados [1970];[Banned In Sweden]
+La furia del ring [1961];[Banned In Sweden]
+La mala ordina [1972];[Banned In Sweden]
+La Noche Del Terror Ciego [1971];[Banned In Sweden]
+La polizia incrimina la legge assolve [1973];[Banned In Sweden]
+La punition [1973];[Banned In Sweden]
+La semana del asesino [1972];[Banned In Sweden]
+La tentación desnuda [1966];[Banned In Sweden]
+Lady in a Cage [1964];[Banned In Sweden]
+Lang bei wei jian [1974];[Banned In Sweden]
+Lat sau san taam [1992];[Banned In Sweden]
+Le Amazzoni - Donne d'amore e di guerra [1973];[Banned In Sweden]
+Le fauve est lâché [1959];[Banned In Sweden]
+Le gorille vous salue bien [1958];[Banned In Sweden]
+Le malizie di Venere [1969];[Banned In Sweden]
+Le sang des bêtes [1949];[Banned In Sweden]
+Le Saut de L'ange [1971];[Banned In Sweden]
+Le sette sfide [1961];[Banned In Sweden]
+Leathernecks [1989];[Banned In Sweden]
+Les étrangers [1969];[Banned In Sweden]
+Les loups dans la bergerie [1960];[Banned In Sweden]
+Les salauds vont en enfer [1955];[Banned In Sweden]
+Lionheart [1990];[Banned In Sweden]
+Live Like a Cop, Die Like a Man AKA The Terminators [1976];[Banned In Sweden]
+Lo straniero di silenzio [1968];[Banned In Sweden]
+Lorna [1964];[Banned In Sweden]
+Macabre [1958];[Banned In Sweden]
+Machine-Gun Kelly [1958];[Banned In Sweden]
+Macumba Love [1960];[Banned In Sweden]
+Mad Dog Coll [1961];[Banned In Sweden]
+Mad Max [1979];[Banned In Sweden]
+Man Bites Dog [1992];[Banned In Sweden]
+Man of the West [1958];[Banned In Sweden]
+Mania [1960];[Banned In Sweden]
+Mannaja [1977];[Banned In Sweden]
+Many Passed By [1956];[Banned In Sweden]
+Mark of the Devil [1970];[Banned In Sweden]
+Marked for Death [1990];[Banned In Sweden]
+Maximum Overdrive [1986];[Banned In Sweden]
+Mean Frank and Crazy Tony AKA Escape From Death Row [1973];[Banned In Sweden]
+Méfiez-vous, fillettes! [1957];[Banned In Sweden]
+Mellem venner [1963];[Banned In Sweden]
+Meng long guo jiang [1972];[Banned In Sweden]
+Missing in Action 2: The Beginning [1985];[Banned In Sweden]
+Mosquito der Schänder [1977];[Banned In Sweden]
+Motorcycle Gang [1957];[Banned In Sweden]
+Mr. No Legs [1979];[Banned In Sweden]
+Mr. Sardonicus [1961];[Banned In Sweden]
+Ms. 45 [1981];[Banned In Sweden]
+Naked Angels [1969];[Banned In Sweden]
+Naked Massacre [1976];[Banned In Sweden]
+Nam Angels [1989];[Banned In Sweden]
+Neon Maniacs [1986];[Banned In Sweden]
+Never Let Go [1960];[Banned In Sweden]
+Never Too Young to Die [1986];[Banned In Sweden]
+Newman's Law [1974];[Banned In Sweden]
+Night of the Creeps [1986];[Banned In Sweden]
+Night of the Demons [1988];[Banned In Sweden]
+Night Screams [1988];[Banned In Sweden]
+Nightmare [1964];[Banned In Sweden]
+Nightmare Honeymoon [1974];[Banned In Sweden]
+Nightmares [1980];[Banned In Sweden]
+Ninja III: The Domination [1984];[Banned In Sweden]
+No Dead Heroes [1986];[Banned In Sweden]
+No Orchids for Miss Blandish [1948];[Banned In Sweden]
+Nympho: A Woman's Urge [1965];[Banned In Sweden]
+Oggi a me... domani a te! [1968];[Banned In Sweden]
+Open Season [1974];[Banned In Sweden]
+Operation Manhunt [1954];[Banned In Sweden]
+Opposing Force [1986];[Banned In Sweden]
+Os Cafajestes [1962];[Banned In Sweden]
+Outlaw's Son [1957];[Banned In Sweden]
+Pardonnez nos offenses [1956];[Banned In Sweden]
+Peacemaker [1990];[Banned In Sweden]
+Peeping Tom [1960];[Banned In Sweden]
+Per una bara piena di dollari [1971];[Banned In Sweden]
+Pigs and Battleships [1961];[Banned In Sweden]
+Policewomen [1974];[Banned In Sweden]
+Portrait of a Mobster [1961];[Banned In Sweden]
+Predator [1987];[Banned In Sweden]
+Pretty Boy Floyd [1960];[Banned In Sweden]
+Prison [1987];[Banned In Sweden]
+Professionisti per un massacro [1967];[Banned In Sweden]
+Project: Shadowchaser II: Night Siege [1994];[Banned In Sweden]
+Prom Night [1980];[Banned In Sweden]
+Quel maledetto giorno della resa dei conti [1971];[Banned In Sweden]
+Quel maledetto treno blindato [1978];[Banned In Sweden]
+Quella sporca storia nel west [1968];[Banned In Sweden]
+Quiet Cool [1986];[Banned In Sweden]
+Re-Animator [1985];[Banned In Sweden]
+Red Blood, Yellow Blood AKA Professionals for a Massacre [1967];[Banned In Sweden]
+Reform School Girl [1957];[Banned In Sweden]
+Réquiem para el gringo [1968];[Banned In Sweden]
+Return of Sabata [1971];[Banned In Sweden]
+Return of the One Armed Swordsman [1969];[Banned In Sweden]
+Riff Raff Girls [1959];[Banned In Sweden]
+Rolling Vengeance [1987];[Banned In Sweden]
+Rosmunda e Alboino [1961];[Banned In Sweden]
+Sartana the Gravedigger AKA I Am Sartana, Your Angel of Death [1969];[Banned In Sweden]
+Savage Streets [1984];[Banned In Sweden]
+Scream for Help [1984];[Banned In Sweden]
+Se incontri Sartana prega per la tua morte [1968];[Banned In Sweden]
+Seddok, l'erede di Satana [1960];[Banned In Sweden]
+Sei donne per l'assassino [1964];[Banned In Sweden]
+Seishun zankoku monogatari [1960];[Banned In Sweden]
+Sette pistole per un massacro [1967];[Banned In Sweden]
+Seven [1979];[Banned In Sweden]
+Seven Pistols for a Massacre AKA Adios Hombre [1967];[Banned In Sweden]
+Shatter [1974];[Banned In Sweden]
+Shi san tai bao [1970];[Banned In Sweden]
+Shivers [1975];[Banned In Sweden]
+Shock Corridor [1963];[Banned In Sweden]
+Shocker [1989];[Banned In Sweden]
+Showdown in Little Tokyo [1991];[Banned In Sweden]
+Silent Madness [1984];[Banned In Sweden]
+Silent Rage [1982];[Banned In Sweden]
+Skull: A Night of Terror! [1987];[Banned In Sweden]
+Slaughter High [1986];[Banned In Sweden]
+Snake Eater [1989];[Banned In Sweden]
+Snake Fist Fighter AKA Master with Cracked Fingers [1973];[Banned In Sweden]
+Sono Sartana, il vostro becchino [1969];[Banned In Sweden]
+Speed Crazy [1959];[Banned In Sweden]
+Spookies [1986];[Banned In Sweden]
+Stage Fright [1980];[Banned In Sweden]
+Stagecoach of the Condemned [1970];[Banned In Sweden]
+Steele Justice [1987];[Banned In Sweden]
+Stingray [1978];[Banned In Sweden]
+Stone Cold [1991];[Banned In Sweden]
+Strait-Jacket [1964];[Banned In Sweden]
+Sudden Impact [1983];[Banned In Sweden]
+Sunnyside [1979];[Banned In Sweden]
+Superstition [1982];[Banned In Sweden]
+Sword of the Conqueror [1961];[Banned In Sweden]
+Teenage Crime Wave [1955];[Banned In Sweden]
+Teenage Doll [1957];[Banned In Sweden]
+Teenage Wolfpack [1956];[Banned In Sweden]
+Terrible Day of the Big Gundown [1971];[Banned In Sweden]
+Terror [1978];[Banned In Sweden]
+Terror at Black Falls [1962];[Banned In Sweden]
+Terror in the Aisles [1984];[Banned In Sweden]
+Testa t'ammazzo, croce... sei morto... Mi chiamano Alleluja [1971];[Banned In Sweden]
+Texas Chainsaw Massacre - The Next Generation [1994];[Banned In Sweden]
+That Man Bolt [1973];[Banned In Sweden]
+The Adventurers [1969];[Banned In Sweden]
+The Awful Dr. Orloff [1962];[Banned In Sweden]
+The Bastard [1968];[Banned In Sweden]
+The Beat Generation [1959];[Banned In Sweden]
+The Big Operator [1959];[Banned In Sweden]
+The Black Sleep [1956];[Banned In Sweden]
+The Bloody Fists [1972];[Banned In Sweden]
+The Bloody Judge [1970];[Banned In Sweden]
+The Bonnie Parker Story [1958];[Banned In Sweden]
+The Born Losers [1967];[Banned In Sweden]
+The Boys Next Door [1985];[Banned In Sweden]
+The Brain That Wouldn't Die [1962];[Banned In Sweden]
+The Brides of Dracula [1960];[Banned In Sweden]
+The Casino [1972];[Banned In Sweden]
+The Challenge [1960];[Banned In Sweden]
+The City of the Dead [1960];[Banned In Sweden]
+The Cool and the Crazy [1958];[Banned In Sweden]
+The Cruel Ones AKA The Hellbenders [1967];[Banned In Sweden]
+The Curse of Frankenstein [1957];[Banned In Sweden]
+The Delightful Forest [1972];[Banned In Sweden]
+The Desperados [1969];[Banned In Sweden]
+The Dirt Gang [1972];[Banned In Sweden]
+The Dirty Outlaws [1967];[Banned In Sweden]
+The Disappearing Women [1959];[Banned In Sweden]
+The Enforcer [1951];[Banned In Sweden]
+The Exterminator [1980];[Banned In Sweden]
+The Fall of the House of Usher [1960];[Banned In Sweden]
+The Farmer [1977];[Banned In Sweden]
+The Fiend Who Walked the West [1958];[Banned In Sweden]
+The Final Terror [1983];[Banned In Sweden]
+The Flesh and the Fiends [1960];[Banned In Sweden]
+The Four Skulls of Jonathan Drake [1959];[Banned In Sweden]
+The Gauntlet [1977];[Banned In Sweden]
+The Get-Man AKA Combat Cops [1974];[Banned In Sweden]
+The Girl in the Kremlin [1957];[Banned In Sweden]
+The Gorilla Greets You [1958];[Banned In Sweden]
+The Hellions [1961];[Banned In Sweden]
+The Heroic Ones [1970];[Banned In Sweden]
+The Hills Have Eyes Part II [1984];[Banned In Sweden]
+The House By The Lake [1976];[Banned In Sweden]
+The Incubus [1982];[Banned In Sweden]
+The Inglorious Bastards AKA Counterfeit Commandos [1978];[Banned In Sweden]
+The Italian Connection AKA Hired To Kill [1972];[Banned In Sweden]
+The Killer [1989];[Banned In Sweden]
+The King of the Kickboxers [1990];[Banned In Sweden]
+The Lamp [1987];[Banned In Sweden]
+The Last Hard Men [1976];[Banned In Sweden]
+The Last Hunt [1956];[Banned In Sweden]
+The Last Hunter [1980];[Banned In Sweden]
+The Last Mile [1959];[Banned In Sweden]
+The Last Victim [1975];[Banned In Sweden]
+The Leech Woman [1960];[Banned In Sweden]
+The Left Handed Gun [1958];[Banned In Sweden]
+The Longest Bridge [1976];[Banned In Sweden]
+The Love Rebellion [1967];[Banned In Sweden]
+The Man from Hong Kong [1975];[Banned In Sweden]
+The Man Who Could Cheat Death [1959];[Banned In Sweden]
+The Manster [1959];[Banned In Sweden]
+The Mercenaries [1968];[Banned In Sweden]
+The Mini-Skirt Mob [1968];[Banned In Sweden]
+The Mongols [1961];[Banned In Sweden]
+The Music Box Kid [1960];[Banned In Sweden]
+The Naked Cage [1986];[Banned In Sweden]
+The New Kids [1985];[Banned In Sweden]
+The No Mercy Man [1973];[Banned In Sweden]
+The Octagon [1980];[Banned In Sweden]
+The Outing [1987];[Banned In Sweden]
+The Pick-Up [1968];[Banned In Sweden]
+The Pit and the Pendulum [1961];[Banned In Sweden]
+The Plunderers [1960];[Banned In Sweden]
+The Punisher [1989];[Banned In Sweden]
+The Punishment [1973];[Banned In Sweden]
+The Purple Gang [1959];[Banned In Sweden]
+The Return of Dracula [1958];[Banned In Sweden]
+The Return of the Living Dead [1985];[Banned In Sweden]
+The Return of the Texas Chainsaw Massacre [1994];[Banned In Sweden]
+The Revenge of Frankenstein [1958];[Banned In Sweden]
+The Rise and Fall of Legs Diamond [1960];[Banned In Sweden]
+The Savage Seven [1968];[Banned In Sweden]
+The Seven Revenges [1961];[Banned In Sweden]
+The Silent Stranger [1968];[Banned In Sweden]
+The Split [1959];[Banned In Sweden]
+The Stranger and the Gunfighter [1974];[Banned In Sweden]
+The Strangers [1969];[Banned In Sweden]
+The Stranglers of Bombay [1960];[Banned In Sweden]
+The Terrible People [1960];[Banned In Sweden]
+The Terror of the Tongs [1961];[Banned In Sweden]
+The Texas Chainsaw Massacre 2 [1986];[Banned In Sweden]
+The Tiger Attacks [1959];[Banned In Sweden]
+The Touchables [1961];[Banned In Sweden]
+The Ultimate Warrior [1975];[Banned In Sweden]
+The Unscrupulous Ones [1962];[Banned In Sweden]
+The Vampire and the Ballerina [1960];[Banned In Sweden]
+The Way of The Dragon AKA Return of the Dragon [1972];[Banned In Sweden]
+The Wicked Go to Hell [1955];[Banned In Sweden]
+The Wild Angels [1966];[Banned In Sweden]
+The Witch [1982];[Banned In Sweden]
+The Wolves in the Sheepfold [1960];[Banned In Sweden]
+The Young Captives [1959];[Banned In Sweden]
+The Zebra Force [1976];[Banned In Sweden]
+The Zebra Killer [1974];[Banned In Sweden]
+They Call Him Cemetery AKA A Bullet for a Stranger [1971];[Banned In Sweden]
+They Came From Within [1975];[Banned In Sweden]
+Thriller - en grym film [1974];[Banned In Sweden]
+Thriller: A Cruel Picture [1974];[Banned In Sweden]
+Tian shi xing dong [1987];[Banned In Sweden]
+Tian xia di yi quan [1972];[Banned In Sweden]
+To Catch a Spy [1957];[Banned In Sweden]
+Today We Kill Tomorrow We Die AKA Today It's Me, Tomorrow It's You [1968];[Banned In Sweden]
+Tombs Of The Blind Dead [1971];[Banned In Sweden]
+Tourist Trap [1979];[Banned In Sweden]
+Trackdown [1976];[Banned In Sweden]
+Trapped [1982];[Banned In Sweden]
+Truck Turner [1974];[Banned In Sweden]
+Twice Dead [1988];[Banned In Sweden]
+Twisted Nightmare [1987];[Banned In Sweden]
+Un minuto per pregare, un instante per morire [1968];[Banned In Sweden]
+Un uomo, un cavallo, una pistola [1967];[Banned In Sweden]
+Underworld U.S.A. [1961];[Banned In Sweden]
+Unternehmen Teutonenschwert [1958];[Banned In Sweden]
+Uomini si nasce poliziotti si muore [1976];[Banned In Sweden]
+Vampire Circus [1972];[Banned In Sweden]
+Vendetta [1986];[Banned In Sweden]
+Viele kamen vorbei [1956];[Banned In Sweden]
+Vigilante Force [1976];[Banned In Sweden]
+Villa Vennely [1964];[Banned In Sweden]
+Vivo per la tua morte [1968];[Banned In Sweden]
+Vixen! [1968];[Banned In Sweden]
+W Django! [1971];[Banned In Sweden]
+White Heat [1949];[Banned In Sweden]
+White Slave Ship [1961];[Banned In Sweden]
+Wild Gypsies [1969];[Banned In Sweden]
+Woman and Temptation [1966];[Banned In Sweden]
+Young Girls Beware [1957];[Banned In Sweden]
+Young Warriors [1983];[Banned In Sweden]
+Your Sister is a Werewolf [1985];[Banned In Sweden]
+Black Sunday [1960];[Banned In Sweden & UK]
+Il paese del sesso selvaggio [1972];[Banned In Sweden & UK]
+La maschera del demonio [1960];[Banned In Sweden & UK]
+Leatherface: Texas Chainsaw Massacre III [1990];[Banned In Sweden & UK]
+Sacrifice! AKA Man from Deep River [1972];[Banned In Sweden & UK]
+The Texas Chain Saw Massacre [1974];[Banned In Sweden & UK]
+The Texas Chainsaw Massacre [1974];[Banned In Sweden & UK]
+Aandhi [1975];[Banned In India]
+Aarakshan [2011];[Banned In India]
+Bandit Queen [1994];[Banned In India]
+Bhakta Vidur [1921];[Banned In India]
+City of Joy [1992];[Banned In India]
+Dam999 [2011];[Banned In India]
+Fanaa [2006];[Banned In India]
+Firaaq [2008];[Banned In India]
+Fire [1996];[Banned In India]
+India's Daughter [2014];[Banned In India]
+Indiana Jones and the Temple of Doom [1984];[Banned In India]
+Jodhaa Akbar [2008];[Banned In India]
+Kama Sutra: A Tale of Love [1996];[Banned In India]
+Kissaa Kursee Kaa [1978];[Banned In India]
+Neel Akasher Neechey [1959];[Banned In India]
+Nine Hours to Rama [1963];[Banned In India]
+Ore Oru Gramathile [1987];[Banned In India]
+Paanch [2003];[Banned In India]
+Parzania [2005];[Banned In India]
+Sadda Haq [2013];[Banned In India]
+Sikkim [1971];[Banned In India]
+Tango Charlie [2005];[Banned In India]
+The Da Vinci Code [2006];[Banned In India]
+The Girl with the Dragon Tattoo [2011];[Banned In India]
+Vishwaroopam [2013];[Banned In India]
+...E tu vivrai nel terrore! L'aldilà [1981];[Banned In Germany]
+A Cat in the Brain AKA Nightmare Concert [1990];[Banned In Germany]
+À l'intérieur [2007];[Banned In Germany]
+A Prisão [1980];[Banned In Germany]
+Absurd AKA Horrible [1981];[Banned In Germany]
+America the Violent [1996];[Banned In Germany]
+American Guinea Pig: Bouquet of Guts and Gore [2014];[Banned In Germany]
+Anthropophagus [1980];[Banned In Germany]
+Banned! In America [1998];[Banned In Germany]
+Banned! In America II [1998];[Banned In Germany]
+Banned! In America III [1999];[Banned In Germany]
+Banned! In America IV [1999];[Banned In Germany]
+Banned! In America V: The Final Chapter [2000];[Banned In Germany]
+Bare Behind Bars [1980];[Banned In Germany]
+Beyond the Darkness AKA Buried Alive [1979];[Banned In Germany]
+Blood Cult [1985];[Banned In Germany]
+Blood Feast [1963];[Banned In Germany]
+Blood Feast 2: All U Can Eat [2002];[Banned In Germany]
+Bloodeaters [1980];[Banned In Germany]
+Bloodsucking Freaks [1976];[Banned In Germany]
+Bloody Moon [1981];[Banned In Germany]
+Boogeyman II [1983];[Banned In Germany]
+Borderland [2007];[Banned In Germany]
+Braindead [1992];[Banned In Germany]
+Buio Omega [1979];[Banned In Germany]
+Burial Ground - The Nights of Terror [1981];[Banned In Germany]
+C.I.A. Secret Story [1975];[Banned In Germany]
+Cannibal Ferox [1981];[Banned In Germany]
+Cannibal Holocaust [1980];[Banned In Germany]
+Cellat [1975];[Banned In Germany]
+Chiseled [2008];[Banned In Germany]
+City of the Living Dead AKA The Gates of Hell [1980];[Banned In Germany]
+Cobra [1982];[Banned In Germany]
+Condenados a vivir [1972];[Banned In Germany]
+Cut-Throats Nine [1972];[Banned In Germany]
+Cyclops AKA The Unborn [1987];[Banned In Germany]
+Da she [1980];[Banned In Germany]
+Dabide no hoshi: Bishôjo-gari [1979];[Banned In Germany]
+Das komabrutale Duell [1999];[Banned In Germany]
+Day of the Dead [1985];[Banned In Germany]
+Day Of The Woman [1978];[Banned In Germany]
+Dead Alive [1992];[Banned In Germany]
+Demon Wind [1990];[Banned In Germany]
+Dèmoni [1985];[Banned In Germany]
+Demons [1985];[Banned In Germany]
+Dev kani [1984];[Banned In Germany]
+Die Säge des Todes [1981];[Banned In Germany]
+Don't Go in the Woods [1981];[Banned In Germany]
+Don't Open Till Christmas [1984];[Banned In Germany]
+Double Exposure [1983];[Banned In Germany]
+Drive-In Massacre [1976];[Banned In Germany]
+Eaten Alive! AKA Doomed to Die [1980];[Banned In Germany]
+Ecologia del delitto AKA A Bay of Blood AKA Twitch of the Death Nerve [1971];[Banned In Germany]
+El buque maldito [1974];[Banned In Germany]
+Emanuelle and the Last Cannibals [1977];[Banned In Germany]
+Emanuelle e gli ultimi cannibali [1977];[Banned In Germany]
+En büyük yumruk [1983];[Banned In Germany]
+Faccia di spia [1975];[Banned In Germany]
+Faces of Death IV [1990];[Banned In Germany]
+Faces of Death V [1995];[Banned In Germany]
+Faces of Death VI [1996];[Banned In Germany]
+Faces of Gore [1999];[Banned In Germany]
+Facez of Death 2000 [2000];[Banned In Germany]
+Facez of Death 2000 3 [2000];[Banned In Germany]
+Facez of Death 2000 4 [2000];[Banned In Germany]
+Facez of Death 2000: Part Five [2002];[Banned In Germany]
+Facez of Death 2000: Part Seven;[Banned In Germany]
+Familienradgeber [2006];[Banned In Germany]
+Family Saga [2006];[Banned In Germany]
+Female Harakiri: Glorious Death [1990];[Banned In Germany]
+Fetus [2008];[Banned In Germany]
+Gecenin Sonu [1983];[Banned In Germany]
+Giallo a Venezia [1979];[Banned In Germany]
+Giallo in Venice [1979];[Banned In Germany]
+Ginî piggu 4: Pîtâ no akuma no joi-san [1986];[Banned In Germany]
+Ginî piggu: Akuma no jikken [1985];[Banned In Germany]
+Ginî piggu: Zansatsu supesharu [1988];[Banned In Germany]
+Grave Misdemeanors [1989];[Banned In Germany]
+Guinea Pig 4: Devil Woman Doctor [1986];[Banned In Germany]
+Guinea Pig 5: Android of Notre Dame [1989];[Banned In Germany]
+Guinea Pig: Devil's Experiment [1985];[Banned In Germany]
+Halloween II [1981];[Banned In Germany]
+Hobo with a Shotgun [2011];[Banned In Germany]
+Hospital Massacre [1981];[Banned In Germany]
+Hostel: Part II [2007];[Banned In Germany]
+I Spit On Your Grave [1978];[Banned In Germany]
+I Spit on Your Grave [2010];[Banned In Germany]
+I Spit on Your Grave 2 [2013];[Banned In Germany]
+Ichi the Killer [2001];[Banned In Germany]
+Il bosco fuori [2006];[Banned In Germany]
+Insan avcisi [1975];[Banned In Germany]
+Inside [2007];[Banned In Germany]
+Invincible Super Chan [1971];[Banned In Germany]
+Isle of the Damned [2008];[Banned In Germany]
+Japanese Hell [1999];[Banned In Germany]
+Jigoku [1999];[Banned In Germany]
+Kartal Bey [1984];[Banned In Germany]
+Kikuropusu [1987];[Banned In Germany]
+Kin [1974];[Banned In Germany]
+Koroshiya 1 [2001];[Banned In Germany]
+La montagna del dio cannibale [1978];[Banned In Germany]
+La morte vivante [1982];[Banned In Germany]
+La rebelión de las muertas [1973];[Banned In Germany]
+La settima donna [1978];[Banned In Germany]
+Last House on the Beach [1978];[Banned In Germany]
+Le notti del terrore [1981];[Banned In Germany]
+Lei ting chu chuan [1985];[Banned In Germany]
+Les Mémés Cannibales [1988];[Banned In Germany]
+Les raisins de la mort [1978];[Banned In Germany]
+Let Sleeping Corpses Lie AKA The Living Dead at Manchester Morgue [1974];[Banned In Germany]
+Lik Wong [1991];[Banned In Germany]
+Lo squartatore di New York [1982];[Banned In Germany]
+Lost Souls [1980];[Banned In Germany]
+Madhouse [1981];[Banned In Germany]
+Maidens Revenge AKA Virgins from Hell [1987];[Banned In Germany]
+Majestic Thunderbolt [1985];[Banned In Germany]
+Man hantingu: Rizarekushon [2012];[Banned In Germany]
+Mandingo Manhunter AKA Devil Hunter [1980];[Banned In Germany]
+Mangiati vivi! [1980];[Banned In Germany]
+Maniac [2012];[Banned In Germany]
+Mask of Murder [1985];[Banned In Germany]
+Melek yüzlü cani [1986];[Banned In Germany]
+Mexican Werewolf in Texas [2005];[Banned In Germany]
+Mondo Cannibale [1980];[Banned In Germany]
+Mother's Day [1980];[Banned In Germany]
+Mountain of the Cannibal God [1978];[Banned In Germany]
+Night Life [1989];[Banned In Germany]
+Night of the Demon [1980];[Banned In Germany]
+Night of the Living Dead [1968];[Banned In Germany]
+Night of the Living Dead [1990];[Banned In Germany]
+Nightmare [1981];[Banned In Germany]
+Nightmares in a Damaged Brain [1981];[Banned In Germany]
+Non si deve profanare il sonno dei morti [1974];[Banned In Germany]
+Onna harakiri: sange [1990];[Banned In Germany]
+Paura nella Città dei Morti Viventi [1980];[Banned In Germany]
+Perawan disarang sindikat [1987];[Banned In Germany]
+Pledge Night [1990];[Banned In Germany]
+Rabid Grannies [1988];[Banned In Germany]
+Reazione a catena [1971];[Banned In Germany]
+Redneck Zombies [1987];[Banned In Germany]
+Revenge of the Boogeyman [1983];[Banned In Germany]
+Riki-Oh: The Story of Ricky [1991];[Banned In Germany]
+Riverplay [2001];[Banned In Germany]
+Rosso sangue [1981];[Banned In Germany]
+Sadisticum [2009];[Banned In Germany]
+Sexo caníbal [1980];[Banned In Germany]
+Ship of Zombies AKA The Ghost Galleon AKA Horror of the Zombies [1974];[Banned In Germany]
+Shogun's Sadism [1976];[Banned In Germany]
+Slaughterhouse [1987];[Banned In Germany]
+Slaughterhouse Rock [1988];[Banned In Germany]
+Splatter University [1984];[Banned In Germany]
+Star of David: Beautiful Girl Hunter [1979];[Banned In Germany]
+Storm Warning [2007];[Banned In Germany]
+Terror at Tenkiller [1986];[Banned In Germany]
+Tetsuo II: Body Hammer [1992];[Banned In Germany]
+The American Scream [1988];[Banned In Germany]
+The Bang Bang Gang [1970];[Banned In Germany]
+The Beyond [1981];[Banned In Germany]
+The Burning Moon [1992];[Banned In Germany]
+The Butcher [2007];[Banned In Germany]
+The Cannibals AKA White Cannibal Queen [1980];[Banned In Germany]
+The Coma-Brutal Duel [1999];[Banned In Germany]
+The Dead Next Door [1989];[Banned In Germany]
+The Dentist [1996];[Banned In Germany]
+The Executioner [1975];[Banned In Germany]
+The Grapes of Death [1978];[Banned In Germany]
+The Grim Reaper AKA The Zombie's Rage [1980];[Banned In Germany]
+The guinea pig 2: Nôtoru Damu no andoroido [1989];[Banned In Germany]
+The Image [1975];[Banned In Germany]
+The Incredible Torture Show [1976];[Banned In Germany]
+The Last House in the Woods [2006];[Banned In Germany]
+The Living Dead Girl [1982];[Banned In Germany]
+The New York Ripper [1982];[Banned In Germany]
+The Orphan Killer [2011];[Banned In Germany]
+The Prowler [1981];[Banned In Germany]
+The Slumber Party Massacre [1982];[Banned In Germany]
+The Worst of Faces of Death [1987];[Banned In Germany]
+There Was a Little Girl [1981];[Banned In Germany]
+Tian zhan [1971];[Banned In Germany]
+Tokugawa onna keibatsu-emaki: Ushi-zaki no kei [1976];[Banned In Germany]
+Toxic Zombies [1980];[Banned In Germany]
+Train [2008];[Banned In Germany]
+Turkish First Blood [1983];[Banned In Germany]
+Un gatto nel cervello [1990];[Banned In Germany]
+Unmasked Part 25 [1989];[Banned In Germany]
+Vahsi kan [1983];[Banned In Germany]
+Vengeance of the Zombies [1973];[Banned In Germany]
+Voyeur.com [2000];[Banned In Germany]
+Wrong Turn 5 [2012];[Banned In Germany]
+X-Ray [1981];[Banned In Germany]
+Yan jing she [1982];[Banned In Germany]
+Zombi 2 AKA Zombie Flesh Eaters [1979];[Banned In Germany]
+Zombi 3 [1988];[Banned In Germany]
+Zombi Holocaust [1980];[Banned In Germany]
+Zombie [1979];[Banned In Germany]
+Zombie Flesh Eaters 2 [1988];[Banned In Germany]
+Zombie Holocaust AKA Dr. Butcher M.D. [1980];[Banned In Germany]
+The Human Centipede II (Full Sequence) [2011];[Banned In Germany & UK]
+Hot Spur [1968];[Banned In Germany & Sweden]
+Incubo sulla città contaminata [1980];[Banned In Germany & Sweden]
+Nightmare City AKA City of the Walking Dead [1980];[Banned In Germany & Sweden]
+Tenebre [1982];[Banned In Germany & Sweden]
+The Burning [1981];[Banned In Germany & Sweden]
+Virus [1980];[Banned In Germany & Sweden & UK]
+Zombie Creeping Flesh AKA Hell of the Living Dead [1980];[Banned In Germany & Sweden & UK]

@@ -1,6 +1,7 @@
 brrip;BDRip
 bdrip;BDRip
 dvdrip;DVDRip
+DVDRIP;DVDRip
 dvd;DVDRip
 vhsrip;VHSRip
 vhs;VHSRip
@@ -28,3 +29,9 @@ Web;WEB-DL
 webdl;WEB-DL
 WebDL;WEB-DL
 webDL;WEB-DL
+WEB-dl;WEB-DL
+WEB-dl;WEB-DL
+WEBRIP;WEBRip
+WEBRip;WEBRip
+hdtv;HDTV
+DVD;DVDRip

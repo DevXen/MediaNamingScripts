@@ -1,4 +1,16 @@
-﻿{any{if (genres.join(',  ').matchAll(/musical/))('Musicials/')}{if (genres.join(',  ').matchAll(/musical/))('Musicals/')}{(csv('C:/FileBot Settings/Movies/GenreBasedOnMovie.csv').get(n+" ["+y+"]"))}{(csv('C:/FileBot Settings/Movies/StandUpComedyFilms.csv').get(n+" ["+y+"]")) ? '\\' : {any{if (genres.join(', ')){genres.minus(/Animation/).minus(/TV Movie/)[0]+'/'}}{genre}{'[No Genre]'}}}}/{n.replace(':',' - ')} [{y}] {if (s3d) '[3D]'} {((csv('C:/FileBot Settings/Movies/ExtraMovieInfo/Remakes.csv').get(n+" ["+y+"]"))).minus(null).replace(/Remake/, '[Remake]')} {"["+any{(csv('C:/FileBot Settings/Movies/MovieSource.csv').get(source))}{source}{'No Source'}+"]"}
+﻿{'\\\\mediaxen/MediaVault/Movies3'}{any{if (s3d) '/[3D]/'}{vf =~ /1080p|720p|2160p|576p/ ? '/[HD]/' : '/[SD]/'}}{any{if (genres =~ /Animation|Animated/) 'Animation/'}{(csv('C:/FileBot Settings/Movies/StandUpComedyFilms.csv').get(n+" ["+y+"]"))}}{any{def map=['erinbrown':'[Actors]/Erin Brown','stephenking':'[Stephen King]']; actors.join(', ').lower().replaceAll(/[\W]/, "").matchAll(/erinbrown|stephenking/).findResults{ map[it] }.join(',')+'/'}{'['+file.path.replaceAll(/[\W]/, "").match(/monstervision|rifftrax|fanedit|usaupallnight|elvirasmoviemacabre/).lower().replaceAll(/workprint/,'WorkPrint').replaceAll(/rifftrax/,'RiffTrax').replaceAll(/miniseries/,'Mini-Series').replaceAll (/monstervision/,'MonsterVision').replaceAll(/fanedit/,'FanEdits').replaceAll(/usaupallnight/,'USA Up All Night').replaceAll(/elvirasmoviemacabre/,'Elvira\'s Movie Macabre')+']/'}
+
+
+
+
+
+
+
+
+
+
+
+{any{if (genres.join(',  ').matchAll(/musical/))('Musicials/')}{if (genres.join(',  ').matchAll(/musical/))('Musicals/')}{(csv('C:/FileBot Settings/Movies/GenreBasedOnMovie.csv').get(n+" ["+y+"]"))}{(csv('C:/FileBot Settings/Movies/StandUpComedyFilms.csv').get(n+" ["+y+"]")) ? '\\' : {any{if (genres.join(', ')){genres.minus(/Animation/).minus(/TV Movie/)[0]+'/'}}{genre}{'[No Genre]'}}}}/{n.replace(':',' - ')} [{y}] {if (s3d) '[3D]'} {((csv('C:/FileBot Settings/Movies/ExtraMovieInfo/Remakes.csv').get(n+" ["+y+"]"))).minus(null).replace(/Remake/, '[Remake]')} {"["+any{(csv('C:/FileBot Settings/Movies/MovieSource.csv').get(source))}{source}{'No Source'}+"]"}
 
 
 {if (genres.minus(/Animation/).minus(/TV Movie/)[0])(genres.minus(/Animation/).minus(/TV Movie/)[0])}

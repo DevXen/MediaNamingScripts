@@ -1,0 +1,26 @@
+﻿{(csv('C:/FileBot Settings/Movies/ExtraMovieInfo/Cinavia.csv').get(n+" ["+y+"]"))} {(csv('C:/FileBot Settings/Movies/ExtraMovieInfo/MovieStudios.csv').get(n+" ["+y+"]"))} {(csv('C:/FileBot Settings/Movies/ExtraMovieInfo/TvChannelOriginalMovie.csv').get(n+" ["+y+"]"))} {(csv('C:/FileBot Settings/Movies/ExtraMovieInfo/TrueStory.csv').get(n+" ["+y+"]"))} {(csv('C:/FileBot Settings/Movies/ExtraMovieInfo/RealPeople.csv').get(n+" ["+y+"]"))} {(csv('C:/FileBot Settings/Movies/ExtraMovieInfo/PostCreditScenes.csv').get(n+" ["+y+"]"))} {(csv('C:/FileBot Settings/Movies/ExtraMovieInfo/DirectToVideo.csv').get(n+" ["+y+"]"))} {(csv('C:/FileBot Settings/Movies/ExtraMovieInfo/ShockMovies.csv').get(n+" ["+y+"]"))} {(csv('C:/FileBot Settings/Movies/ExtraMovieInfo/FictionalDocumentaries.csv').get(n+" ["+y+"]"))} {(csv('C:/FileBot Settings/Movies/ExtraMovieInfo/ComingOfAge.csv').get(n+" ["+y+"]"))} {(csv('C:/FileBot Settings/Movies/ExtraMovieInfo/MindFuck.csv').get(n+" ["+y+"]"))} {(csv('C:/FileBot Settings/Movies/ExtraMovieInfo/Mockumentaries.csv').get(n+" ["+y+"]"))} {(csv('C:/FileBot Settings/Movies/ExtraMovieInfo/TimeTravel.csv').get(n+" ["+y+"]"))} {(csv('C:/FileBot Settings/Movies/ExtraMovieInfo/UnsimulatedSex.csv').get(n+" ["+y+"]"))} {(csv('C:/FileBot Settings/Movies/ExtraMovieInfo/BannedFilms.csv').get(n+" ["+y+"]"))} {(csv('C:/FileBot Settings/Movies/ExtraMovieInfo/BasedOnBooks.csv').get(n+" ["+y+"]"))} {(csv('C:/FileBot Settings/Movies/ExtraMovieInfo/WAC.csv').get(n+" ["+y+"]"))}
+
+
+
+
+
+{" "+(csv('C:/FileBot Settings/Movies/ExtraMovieInfo/Remakes.csv').get(n+" ["+y+"]"))}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

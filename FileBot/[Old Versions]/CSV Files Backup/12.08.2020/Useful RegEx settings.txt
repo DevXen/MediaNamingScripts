@@ -1,0 +1,13 @@
+to remove every line without a [ in it: ^[^]]*$
+To Replace everything after ] Replace: \].*  with: ]
+
+
+To Remove the first 10 characters: Try searching for "^.{10}(.*)$" and replacing with "\1", with regular expressions.
+
+
+To Remove AKA, Separate to a different Line, and add the same year on both:
+Find: (\w.*?)\s+AKA\s+(\w.*?)(?:\s+)?(\x5b\d+\x5d)
+Replace With: $1 $3\n$2 $3
+
+
+To find duplicates in Libre Office sheets: =COUNTIF(A$1:A$768,A1)   (A$768 is the range of the row. so this goes from A1 to A768
