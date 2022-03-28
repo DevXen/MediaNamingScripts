@@ -1,0 +1,303 @@
+﻿$if($not($in(%version%,Acoustic)),$if($in(%title%,Acoustic),$set(title,%title% [Acoustic Version])))
+
+
+
+
+
+$if($or($performer(guest lead vocals),$performer(guest spoken vocals)),$set(title,%title% [Feat. $if($not($performer(guest spoken vocals)),$performer(guest lead vocals)])$if($and($performer(guest spoken vocals),$performer(guest lead vocal)),$performer(guest lead vocal)\, $performer(guest spoken vocals)])$if($not($performer(guest lead vocal)),$performer(guest spoken vocals)])))
+
+$noop(
+$if($performer(vocals),$set(title,%title% [Feat. $performer(vocals)]))
+$if($performer(guest vocals),$set(title,%title% [Feat. $performer(guest vocals)]))
+)
+
+$noop(Moving Feat. Artist from Artist To Song Title:)
+$set(_feat,$rsearch(%artist%,feat. [^:]+))
+$set(_feat,$rsearch(%artist%,With [^:]+))
+$set(_feat,$replace(%_feat%,With,Feat.))
+
+
+$set(_feat,$replace(%_feat%,\(,\())
+$set(_feat,$replace(%_feat%,\),\)))
+
+
+
+
+
+$noop($set(_feat,$replace(%_feat%,Feat.,Featuring)))
+
+$set(title,$if($not(%_feat%),%title%,%title% [%_feat%]))
+$if($not(%_feat%),,$set(artist,%albumartist%) $set(artistsort,%albumartistsort%))
+$if($and($ne(%albumartist%,Various Artists), $inmulti(%releasetype%,compilation)), $set(compilation,0))
+$if($and($ne(%albumartist%,Various Artists), $inmulti(%releasetype%,album)), $set(_ismultiartist,0))
+
+
+
+#noop(Change parantheses to brackets around Feat./Bonus Track/Remix/Etc]
+$set(title,$rreplace(%title%,\(?i\)\\\(\(?=[^\(\)]*\(?:feat|Feat|live|metal.version|instrumental|guitar.instrumental|acoustic.intro|orchestral.version|immortal.version|original.version|instrumental.version|progressive.version|remix|bonus.track\)\)\([^\(\)]+\)\\\),[\\1]))
+
+
+
+$noop(Set album Genre based on album for artist and track for various artists)
+$set(genre,%albumgenre%)
+$set(grouping,%albumgrouping%)
+
+$if($in(%albumartist%,Various Artists),$set(genre,%trackgenre%))
+$if($in(%albumartist%,Various Artists),$set(grouping,%trackgrouping%))
+
+
+
+$if(%version%,$set(title,%title% [%version%]))
+
+
+
+$noop(Adding Live Album name, or MTV Unplugged to Song Title:)
+$if($in(%releasetype%,live),
+
+$set(livealbum,%album%)
+
+$set(discsubtitle,%album%)
+
+
+$noop($if($not($in(%livealbum%,Live)),$set(livealbum,Live: %livealbum%)))
+
+$if2($not($in(%album%,[Live Album])),$set(%livealbum%,Live: %livealbum%),$if($not($in(%album%,Live)),$set(%livealbum%,Live: %livealbum%)))
+
+$if2($if($in(%album%,MTV Unplugged),$unset(%livealbum%)$set(title,%title% [Live: MTV Unplugged]),$if(%livealbum%,$set(title,%title% [Live: %livealbum%])))))
+
+
+
+$noop(Adding Live Album name, or MTV Unplugged to Song Title: to discsubtiles)
+$if($in($lower(%discsubtitle%),live),$set(livealbum,%discsubtitle%))
+
+
+
+
+
+
+
+
+
+
+$noop(To Set the Country Edition Name:)
+$if($eq($left(%originaldate%,4),%originalyear%),
+    $if($eq(%releasecountry%,JP),$set(Edition,Japan))
+    $if($eq(%releasecountry%,GB),$set(Edition,UK))
+
+
+    $if($eq(%releasecountry%,AR),$set(Edition,Argentina))
+    $if($eq(%releasecountry%,AT),$set(Edition,Austria))
+    $if($eq(%releasecountry%,AU),$set(Edition,Autralia))
+    $if($eq(%releasecountry%,BE),$set(Edition,Belgium))
+    $if($eq(%releasecountry%,BR),$set(Edition,Brazil))
+    $if($eq(%releasecountry%,CA),$set(Edition,Canada))
+    $if($eq(%releasecountry%,CN),$set(Edition,China))
+    $if($eq(%releasecountry%,DE),$set(Edition,German))
+    $if($eq(%releasecountry%,DK),$set(Edition,Denmark))
+    $if($eq(%releasecountry%,EG),$set(Edition,Egypt))
+    $if($eq(%releasecountry%,ES),$set(Edition,Spain))
+    $if($eq(%releasecountry%,FI),$set(Edition,Finland))
+    $if($eq(%releasecountry%,FR),$set(Edition,France))
+
+    $if($eq(%releasecountry%,IT),$set(Edition,Italy))
+
+    $if($eq(%releasecountry%,KP),$set(Edition,North Korea))
+    $if($eq(%releasecountry%,KR),$set(Edition,South Korea))
+    $if($eq(%releasecountry%,MX),$set(Edition,Mexico))
+    $if($eq(%releasecountry%,NL),$set(Edition,Netherlands))
+    $if($eq(%releasecountry%,RU),$set(Edition,Russia))
+    $if($eq(%releasecountry%,SE),$set(Edition,Sweden))
+    $if($eq(%releasecountry%,SV),$set(Edition,El Salvador))
+    $if($eq(%releasecountry%,TW),$set(Edition,Taiwan))
+    $if($eq(%releasecountry%,XE),$set(Edition,European))
+    $if($eq(%releasecountry%,XG),$set(Edition,East Germany))
+    $if($eq(%releasecountry%,US),$unset(Edition))
+    $noop($if($eq(%releasecountry%,XW),$set(Edition,Worldwide)))
+  
+   $noop(To Set country editions)
+      $if(%Edition%,$set(album,%album% [%Edition% Release]))
+)
+
+
+
+$set(title,$replace(%title%,\(Bonus\),[Bonus Track]))
+$set(title,$replace(%title%,\(Studio Outtake\),[Studio Outtake]))
+$set(title,$replace(%title%,\(Alternative Version\),[Alternative Version]))
+$set(title,$replace(%title%,\(Intro\),[Intro]))
+$set(title,$replace(%title%,\(Alternative Lyrics\),[Alternative Lyrics]))
+$set(title,$replace(%title%,\(Alternative Mix\),[Alternative Mix]))
+
+$set(title,$replace(%title%,\(Excerpt\),[Excerpt]))
+$set(title,$replace(%title%,\(Live\)],Live]))
+$set(title,$replace(%title%,[Live ,[Live: ))
+
+$set(title,$replace(%title%,part,Part))
+$set(title,$replace(%title%,\, Part 10,: Part 10))
+$set(title,$replace(%title%,\, Part 1,: Part 01))
+$set(title,$replace(%title%,\, Part 2,: Part 02))
+$set(title,$replace(%title%,\, Part 3,: Part 03))
+$set(title,$replace(%title%,\, Part 4,: Part 04))
+$set(title,$replace(%title%,\, Part 5,: Part 05))
+$set(title,$replace(%title%,\, Part 6,: Part 06))
+$set(title,$replace(%title%,\, Part 7,: Part 07))
+$set(title,$replace(%title%,\, Part 8,: Part 08))
+$set(title,$replace(%title%,\, Part 9,: Part 09))
+
+
+$noop($if($in(%title%,Acoustic Version),$set(title,%title% [Acoustic Version])))
+$set(title,$replace(%title%, [Live: Album],))
+
+$noop(To replace :' Of ' with: ' of ')
+$set(artist,$replace(%artist%, Of , of ))
+$set(title,$replace(%title%, Of , of ))
+$set(album,$replace(%album%, Of , of ))
+$set(albumartist,$replace(%albumartist%, Of , of ))
+$set(title,$replace(%title%,ITunes ,iTunes ))
+$set(album,$replace(%album%,ITunes ,iTunes ))
+
+$set(artist,$replace(%artist%, VS , Vs ))
+$set(title,$replace(%title%, VS , Vs ))
+$set(album,$replace(%album%, VS , Vs ))
+$set(albumartist,$replace(%albumartist%, VS , Vs ))
+
+
+$noop(To replace EP With [EP] In Title.)
+$if($in(%album%, EP),$set(album,$replace(%album%, EP, [EP]))
+
+
+$set(title,$replace(%title%,[Gods of War Live],[Live: Gods of War]))
+
+$set(title,$replace(%title%,...,…))
+$set(album,$replace(%album%,...,…))
+$set(artist,$replace(%artist%,...,…))
+$set(albumartist,$replace(%albumartist%,...,…))
+$if(%originaldate%,$set(date,%originaldate%))
+$if($in(%album%,Remaster),$set(mastertype,Remaster))
+$if($in(%album%,remaster),$set(mastertype,Remaster))
+
+$set(filename,%_filename%)
+$set(foldername,%_dirname%)
+
+$if($in(%album%,Tribute),$set(releasetype,Tribute)$set(genre,Tribute))
+
+)))))))))
+
+$noop(To Add Remaster To Album TItle:
+$if($ne($left(%originaldate%,4),%originalyear%),$set(album,%album% [%originalyear% Remaster]),)
+)
+
+
+$noop(Move [Live Album], [EP], and [Single] To the end of the album name)
+    $if($in(%album%,[Live Album]),$set(album,$replace(%album%, [Live Album], ))$set(album,%album% [Live Album])))
+    $if($in(%album%,[EP]),$set(album,$replace(%album%, [EP], ))$set(album,%album% [EP])))
+    $if($in(%album%,[Single]),$set(album,$replace(%album%, [Single], ))$set(album,%album% [Single])))
+        $if($in(%album%,[EP] [EP]),$set(album,$replace(%album%, [EP] [EP], ))$set(album,%album% [EP])))
+        $if($in(%album%,[Live Album] [Live Album]),$set(album,$replace(%album%,[Live Album] [Live Album], ))$set(album,%album% [Live Album]))))
+
+
+
+$if($in(%album%,Tribute),$set(albumtype,Tribute))
+$if($in(%album%,tribute),$set(albumtype,Tribute))
+$if($eq(%releasetype%,tribute),$set(albumtype,Tribute))
+$if($eq(%releasetype%,Tribute),$set(albumtype,Tribute))
+$if($in(%album%,Pickin' On),$set(albumtype,Tribute))
+
+
+$if($eq(%grouping%,Rock),$if($eq(%genre%,Alternative),$set(genre,Alternative Rock)))
+
+
+$if($if2($in(%album%,Tribute),$in(%releasetype%,Tribute), $in(%albumtype%,Tribute)),
+$if($in(%album%,Piano),$set(tributetype,Piano))
+$if($in(%album%,Bluegrass),$set(tributetype,Bluegrass))
+$if($in(%album%,Bluegrass),$set(tributetype,Bluegrass))
+$if($in(%album%,Symphonic),$set(tributetype,Symphonic))
+$if($in(%album%,Acoustic),$set(tributetype,Acoustic))
+$if($in(%album%,String Quartet),$set(tributetype,String Quartet))
+$if($in(%album%,String Tribute),$set(tributetype,String Quartet))
+$if($in(%album%,Remix),$set(tributetype,Remix))
+$if($in(%album%,Pickin' On),$set(tributetype,Pickin' On))
+$if($in(%album%,Industrial),$set(tributetype,Industrial))
+$if($in(%album%,Hard Rock),$set(tributetype,Hard Rock))
+$if($in(%album%,Gothic Acoustic),$set(tributetype,Gothic Acoustic))
+$if($in(%album%,Gothicacoustic),$set(tributetype,Gothic Acoustic))
+$if($in(%album%,Lounge),$set(tributetype,Lounge))
+$if($in(%album%,Pickin' On),$set(tributetype,Bluegrass))
+$if($in(%album%, Metal ),$set(tributetype,Metal))
+)
+
+
+$if($eq(%artist%,Hayseed Dixie),$unset(albumtype),$unset(tributype))
+
+
+$if($in(%album%,UHF:),$unset(albumtype),$unset(tributype))
+
+
+
+$if($not(%tributetype%),$if($not($in(%albumtype%,Tribute)),
+      $if(%original_performer%,$set(title,%title% [%original_performer% Cover])
+))))
+
+
+
+
+$if($if2($in(%albumtype%,Tribute)),
+   $if(%original_performer%,
+   $if(%tributetype%,$set(title,%title% [%tributetype% Tribute: %original_performer%]))
+   $if(%albumtype%,$if($not(%tributetype%),$set(title,%title% [Tribute: %original_performer%])))
+)
+
+
+   
+
+
+
+$set(title,$replace(%title%,\(Remastered\),[Remastered]))
+$set(title,$replace(%title%,\(Hidden Track\),[Hidden Track]))
+
+$set(title,$replace(%title%, \(Intro\),[Intro]))
+$noop($set(title,$replace(%title%, Intro,[Intro])))
+$set(title,$replace(%title%,\(Demo\),[Demo]))
+$set(title,$replace(%title%,\(Radio Edit\),[Radio Edit]))
+$set(title,$replace(%title%,\(Intro\),[Intro]))
+
+
+
+
+
+$if($in(%title%,: Live]),$set(title,$replace(%title%,: Live],]))$set(title,$replace(%title%,[,[Live: )))
+$if($in(%title%,Live]),$set(title,$replace(%title%, Live],]))$set(title,$replace(%title%,[,[Live: )))
+$if($in(%title%, And]),$set(title,$replace(%title%, And], And Live])))
+$if($in(%title%, [Live Album]),$set(title,$replace(%title%, [Live Album]],]))))
+
+
+$if($in(%album%,  ),$set(album,$replace(%album%,  , )))
+$if($in(%title%,  ),$set(title,$replace(%title%,  , )))
+
+$if($in(%title%,[Live: Live]),$set(title,$replace(%title%,[Live: Live],[Live])))
+$if($in(%title%,'til),$set(title,$replace(%title%,'til,'Til)))
+
+$if($in(%title%,[Acoustic Version]),$set(title,$replace(%title%,[Acoustic Version],[Studio Acoustic])))
+$if($in(%title%,[untitled]),$set(title,$replace(%title%,[untitled],[Untitled])))
+
+
+$if($in(%title%,: Live),$set(title,$replace(%title%,: Live,]))$set(title,$replace(%title%,[,[Live: )))
+$if($in(%title%, Live]),$set(title,$replace(%title%, Live],]))$set(title,$replace(%title%,[,[Live: )))
+$if($in(%title%,]]),$set(title,$replace(%title%,]],]))))
+
+
+$if($in(%title%, MMXIV),$set(title,$replace(%title%, MMXIV, [MMXIV Version]))))
+
+
+$set(tracknumber,$num(%tracknumber%,2))
+
+
+
+$if($in(%title%, Mix),$set(title,$replace(%title%,\(,[)))
+$if($in(%title%, Mix),$set(title,$replace(%title%,\),])))
+
+$if($in(%title%,Edit),$set(title,$replace(%title%,\(,[)))
+$if($in(%title%,Edit),$set(title,$replace(%title%,\),])))
+
+$if($in(%title%,Bonus),$set(title,$replace(%title%,\(,[)))
+$if($in(%title%,Bonus),$set(title,$replace(%title%,\),])))
+

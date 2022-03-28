@@ -1,0 +1,197 @@
+﻿$if($in(%title%,/),$replace(title,/, - ))
+
+$if($in(%album%,Tribute),$set(albumtype,Tribute))
+$if($in(%album%,tribute),$set(albumtype,Tribute))
+$if($eq(%releasetype%,tribute),$set(albumtype,Tribute))
+$if($eq(%releasetype%,Tribute),$set(albumtype,Tribute))
+
+
+$noop(Set album Genre based on album for artist and track for various artists)
+$set(genre,%albumgenre%)
+$set(grouping,%albumgrouping%)
+
+$if($in(%albumartist%,Various Artists),$set(genre,%trackgenre%))
+$if($in(%albumartist%,Various Artists),$set(grouping,%trackgrouping%))
+
+
+$if($in(%title%,/),$replace(title,/,-))
+
+
+$if($in(%album%,Lullaby),$set(albumtype,Lullaby))
+$if($in(%album%,lullaby),$set(albumtype,Lullaby))
+
+$if($eq(%artists%,Hayseed dDixie),$unset(albumtype),$unset(tributype))
+$if($in(%album%,Great Zeppelin: A Tribute To Led Zeppelin),$unset(albumtype),$unset(tributype))
+
+
+
+$if($if2($in(%album%,Tribute),$in(%releasetype%,Tribute), $in(%albumtype%,Tribute)),
+$if($in(%album%,Piano),$set(tributetype,Piano))
+$if($in(%album%,Bluegrass),$set(tributetype,Bluegrass))
+$if($in(%album%,Bluegrass),$set(tributetype,Bluegrass))
+$if($in(%album%,Symphonic),$set(tributetype,Symphonic))
+$if($in(%album%,Acoustic),$set(tributetype,Acoustic))
+$if($in(%album%,String Quartet),$set(tributetype,String Quartet))
+$if($in(%album%,Remix),$set(tributetype,Remix))
+$if($in(%album%,Pickin' On),$set(tributetype,Pickin' On))
+$if($in(%album%,Industrial),$set(tributetype,Industrial))
+$if($in(%album%,Hard Rock),$set(tributetype,Hard Rock))
+$if($in(%album%,Gothic Acoustic),$set(tributetype,Gothic Acoustic))
+$if($in(%album%,Gothicacoustic),$set(tributetype,Gothic Acoustic))
+$if($in(%album%,Lounge),$set(tributetype,Lounge))
+$if($in(%album%,Pickin' On),$set(tributetype,Bluegrass))
+)
+
+
+$if($in(%album%,Soundtrack),$set(albumtype,Soundtrack))
+$if($eq(%releasetype%,soundtrack),$set(albumtype,Soundtrack))
+$if($eq(%releasetype%,Soundtrack),$set(albumtype,Soundtrack))
+$if($in(%releasetype%,soundtrack),$set(albumtype,Soundtrack))
+$if($eq(%grouping%,Soundtrack),$set(albumtype,Soundtrack))
+$if($eq(%grouping%,soundtrack),$set(albumtype,Soundtrack))
+$if($eq(%genre%,humour),$set(albumtype,Comedy))
+$if($eq(%genre%,comedy),$set(albumtype,Comedy))
+$if($in(%album%,Sympdhonic),$set(albumtype,Tribute))
+$noop($if($eq(%genre%,Musical),$set(albumtype,Musical)))
+$if($ne(%albumartist%,Various Artists),$set(compilation,0))
+$if($in(%album%,Bootleg),$set(albumtype,Bootleg))
+$if($in(%album%,bootleg),$set(albumtype,Bootleg))
+$if($eq(%releasestatus%,Bootleg),$set(albumtype,Bootleg))
+$if($eq(%releasestatus%,bootleg),$set(albumtype,Bootleg))
+
+$if($in(%filename%,Bonus Track),$set(title,%title% [Bonus Track]))
+
+
+$if($eq(%album%,Cereal Killer Soundtrack),$unset(albumtype),$unset(tributype))
+
+
+$noop(
+$if(%albumtype%,$set(calbumtype,$upper($left(%albumtype%,1))$lower($right(%albumtype%,$sub($len(%albumtype%),1)))))
+)
+
+$if(%albumtype%,$set(calbumtype,%albumtype%))
+
+$if($eq(%releasetype%,ep),$unset(calbumtype))
+$if($eq(%releasetype%,single),$unset(albumtype) $unset(calbumtype))
+
+$if(tributetype,$set(%tributetypefolder%,[%tributetype% Tributes]/))
+$if($not(tributetype),$unset(%tributetypefolder%))
+
+
+$if($eq(%compilation%,1),
+
+$noop(Various Artist albums)
+$if($eq(%albumartist%,Various Artists),
+
+ $if(%calbumtype%,
+ $if($not($in(%calbumtype%,Tribute)),
+ $if($not($in(%albumtype%,Soundtrack)),
+ $if($not($in(%albumtype%,Bootleg)),
+		$replace($replace($replace($replace($replace($replace($replace($replace($replace($replace(
+			[%calbumtype%]/%album%/$if($gte(%totaldiscs%,2),Disc $num(%discnumber%,2) - )$num(%tracknumber%,2) - $if2(%artist%,%albumartist%) - %title%
+		,*,[x]),?,),:, -),",'),_, ),|, ),<,[),>,]),  , ),AC DC,ACDC)
+	))
+)))
+
+
+		$if($eq(%albumtype%,Tribute),
+			$replace($replace($replace($replace($replace($replace($replace($replace($replace($replace(
+				[Tributes]/$if(%tributetype%,[%tributetype% Tributes]/)$if(%date%, [$left(%date%,4)]) - %album%/$if($gte(%totaldiscs%,2),Disc $num(%discnumber%,2) - )$num(%tracknumber%,2) - $if2(%artist%,%albumartist%) - %title%
+			,*,[x]),?,),:, -),",'),_, ),|, ),<,[),>,]),  , ),AC DC,ACDC)
+		)
+
+
+		$if($eq(%albumtype%,Soundtrack),
+			$replace($replace($replace($replace($replace($replace($replace($replace($replace($replace(
+				[Soundtracks]/$if(%soundtrack_type%,Soundtrack [%soundtrack_type%]/)$if(%date%, [$left(%date%,4)]) - %album%/$if($gte(%totaldiscs%,2),Disc $num(%discnumber%,2) - )$num(%tracknumber%,2) - $if2(%artist%,%albumartist%) - %title%
+			,*,[x]),?,),:, -),",'),_, ),|, ),<,[),>,]),  , ),AC DC,ACDC)
+		)
+
+		$if($eq(%albumtype%,Bootleg),
+			$replace($replace($replace($replace($replace($replace($replace($replace($replace($replace(
+				[Bootlegs]/$if2(%grouping%,$if2(%genre%,Unknown Grouping))/$if2(%genre%,Unknown Genre)/$if2(%albumartist%,%artist%)/$if(%date%, [$left(%date%,4)] -) %album%/$if($gte(%totaldiscs%,2),Disc $num(%discnumber%,2) - )$num(%tracknumber%,2) - $if2(%artist%,%albumartist%) - %title% 
+			,*,[x]),?,),:, -),",'),_, ),|, ),<,[),>,]),  , ),AC DC,ACDC)
+		)
+
+
+	$if($not(%calbumtype%),
+           $if($eq(%artist%,%albumartist%),
+		  $replace($replace($replace($replace($replace($replace($replace($replace($replace($replace(
+			$if2(%grouping%,Unknown)/$if($eq($left($if2(%artist%,%albumartist%),4),The ),$if2(%artist%,%albumartist%))/$if2(%artist%,%albumartist%) - %album% $if($gte(%totaldiscs%,2),- Disc $num(%discnumber%,2) )- $num(%tracknumber%,2) - %title% 
+		,*,[x]),?,),:, -),",'),_, ),|, ),<,[),>,]),  , ),AC DC,ACDC)
+)
+
+$if($not($eq(%artist%,%albumartist%)),
+		$replace($replace($replace($replace($replace($replace($replace($replace($replace($replace(
+			Various Artists/$if(%date%, [$left(%date%,4)]) - %album%/$if($gte(%totaldiscs%,2),Disc $num(%discnumber%,2) - )$num(%tracknumber%,2) - $if2(%artist%,%albumartist%) - %title%
+		,*,[x]),?,),:, -),",'),_, ),|, ),<,[),>,]),  , ),AC DC,ACDC)
+),
+
+
+
+),
+
+
+$noop(Single Artist Albums)
+
+
+
+
+$if($eq(%compilation%,0),
+$if(%calbumtype%,
+ $if($not($in(%calbumtype%,Tribute)),
+ $if($not($eq(%albumtype%,Soundtrack)),
+ $if($not($eq(%albumtype%,Bootleg)),
+ $if($not($eq(%albumtype%,Lullaby)),
+			$replace($replace($replace($replace($replace($replace($replace($replace($replace($replace(
+				[%calbumtype%]/$if($eq($left($if2(%albumartist%,%artist%),4),The ),%albumartistsort%,$if2(%albumartist%,%artist%))/$if2(%albumartist%,%artist%) - %album% $if($gte(%totaldiscs%,2),- Disc $num(%discnumber%,2) )- $num(%tracknumber%,2) - %title%
+			,*,[x]),?,),:, -),",'),_, ),|, ),<,[),>,]),  , ),AC DC,ACDC)
+	
+))))
+
+		$if($in(%calbumtype%,Tribute),
+			$replace($replace($replace($replace($replace($replace($replace($replace($replace($replace(
+				[Tributes]/$if(tributetype,[%tributetype% Tributes]/)$if(%date%, [$left(%date%,4)]) - %album%/$if2(%albumartist%,%artist%) $if($gte(%totaldiscs%,2),- Disc $num(%discnumber%,2) )- $num(%tracknumber%,2) - %title%
+			,*,[x]),?,),:, -),",'),_, ),|, ),<,[),>,]),  , ),AC DC,ACDC)
+		)
+
+
+		$if($eq(%albumtype%,Soundtrack),
+			$replace($replace($replace($replace($replace($replace($replace($replace($replace($replace(
+				[Soundtracks]/$if(%soundtrack_type%,Soundtrack [%soundtrack_type%]/)$if(%date%, [$left(%date%,4)]) - %album%/$if2(%albumartist%,%artist%) $if($gte(%totaldiscs%,2),- Disc $num(%discnumber%,2) )- $num(%tracknumber%,2) - %title%
+			,*,[x]),?,),:, -),",'),_, ),|, ),<,[),>,]),  , ),AC DC,ACDC)
+		)
+
+		$if($eq(%albumtype%,Bootleg),
+			$replace($replace($replace($replace($replace($replace($replace($replace($replace($replace(
+				[Bootlegs]/$if2(%grouping%,$if2(%genre%,Unknown Grouping))/$if2(%genre%,Unknown Genre)/$if2(%albumartist%,%artist%)/$if2(%artist%,%albumartist%) - %album% $if($gte(%totaldiscs%,2),- Disc $num(%discnumber%,2) )- $num(%tracknumber%,2) - %title% 
+			,*,[x]),?,),:, -),",'),_, ),|, ),<,[),>,]),  , ),AC DC,ACDC)
+		)
+
+
+		$if($in(%calbumtype%,Lullaby),
+			$replace($replace($replace($replace($replace($replace($replace($replace($replace($replace(
+				[Lullaby Renditions]/$if(%date%, [$left(%date%,4)]) - %album%/$if2(%albumartist%,%artist%) $if($gte(%totaldiscs%,2),- Disc $num(%discnumber%,2) )- $num(%tracknumber%,2) - %title%
+			,*,[x]),?,),:, -),",'),_, ),|, ),<,[),>,]),  , ),AC DC,ACDC)
+		)
+
+
+	)
+
+
+
+	$if($not(%calbumtype%),
+		$replace($replace($replace($replace($replace($replace($replace($replace($replace($replace(
+			$if2(%grouping%,$if2(%genre%,Unknown Grouping))/$if2(%genre%,Unknown Genre)/$if2(%albumartistsort%,%artistsort%,%albumartist%,%artist%)/$if2(%albumartist%,%artist%) - %album% $if($gte(%totaldiscs%,2),- Disc $num(%discnumber%,2) )- $num(%tracknumber%,2) - %title%
+		,*,[x]),?,),:, -),",'),_, ),|, ),<,[),>,]),  , ),AC DC,ACDC)
+	))
+)
+
+$noop(Old Version - Group/Band/Title:
+             $if($not(%calbumtype%),
+		$replace($replace($replace($replace($replace($replace($replace($replace($replace($replace(
+			$if2(%grouping%,$if2(%genre%,Unknown))/$if2(%albumartistsort%,%artistsort%,%albumartist%,%artist%)/$if2(%albumartist%,%artist%) - %album% $if($gte(%totaldiscs%,2),- Disc $num(%discnumber%,2) )- $num(%tracknumber%,2) - %title% 
+		,*,[x]),?,),:, -),",'),_, ),|, ),<,[),>,]),  , ),AC DC,ACDC)
+	))
+
+

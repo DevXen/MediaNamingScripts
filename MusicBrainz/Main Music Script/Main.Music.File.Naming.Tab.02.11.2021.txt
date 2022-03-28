@@ -1,0 +1,167 @@
+$set(title,$replace(%title%,...,…))
+$set(album,$replace(%album%,...,…))
+$set(artist,$replace(%artist%,...,…))
+$set(albumartist,$replace(%albumartist%,...,…))
+$if(%originaldate%,$set(date,%originaldate%))
+$set(filename,%_filename%)
+$set(foldername,%_dirname%)
+
+$if($in(%title%,Live),$set(_misctype,Live))
+$if($in(%title%,Demo),$set(_misctype,Demos))
+$if($in(%title%,Acoustic),$set(_misctype,Acoustic))
+$if($in(%title%,Unplugged),$set(_misctype,Acoustic))
+$if($in(%title%,Remix),$set(_misctype,Remixes))
+
+$if($in($lower(%_dirname%),album),$if($not(%discsubtitle%),$set(disctitle,Album)))
+$if($in(%_dirname%,Bonus),$if($not(%discsubtitle%),$set(disctitle,Bonus Disc)))
+
+$if($gte($matchedtracks( ),$div(%totaltracks%,2)),$set(_miscorincomplete,Incomplete),$set(_miscorincomplete,Misc)) 
+$if($gte($matchedtracks( ),%totaltracks%),$unset(_miscorincomplete) $unset(_misctype)) 
+$if($lte($sub(%totaltracks%,$matchedtracks( )),1),$set(_numberofmissingtracks,$sub(%totaltracks%,$matchedtracks( ))$unset(_pluaralmissingtracks))) 
+$if($gt($sub(%totaltracks%,$matchedtracks( )),1),$set(_numberofmissingtracks,$sub(%totaltracks%,$matchedtracks( ))$set(_pluaralmissingtracks,s)))
+
+
+$if($in(%album%,Tribute),$set(_tribute,Tributes))
+$if($in(%album%,tribute),$set(_tribute,Tributes))
+
+$if($eq(%releasetype%,compilation),$set(releasetype,[Compilation Albums]))
+$if($eq(%releasetype%,remix),$set(releasetype,[Remixes]) $set(tributetype,[Remixes]))
+
+
+
+$if($eq(%releasetype%,soundtrack),$set(releasetype,[Soundtracks]))
+
+$if($eq(%releasetype%,album),$set(releasetype,[Studio Albums]))
+$if($eq(%releasetype%,live),$set(releasetype,[Live Albums]))
+$if($eq(%releasetype%,single),$set(releasetype,[Singles]))
+$if($eq(%releasetype%,ep),$set(releasetype,[EPs]))
+
+$if(%_releasecomment%, $set(_releasecomment,\(%_releasecomment%\)),$noop())
+$if($and($eq(%releasecountry%,JP),$not($in(%_releasecomment%,Japan))),$set(_releasecomment,%_releasecomment% \(Japan Import\)))
+$if($and($eq(%releasecountry%,RU),$not($in(%_releasecomment%,Russia))),$set(_releasecomment,%_releasecomment% \(Russian Import\)))
+$if($and($eq(%releasecountry%,XE),$not($in(%_releasecomment%,Europe))),$set(_releasecomment,%_releasecomment% \(European Import\)))
+$if($and($eq(%releasecountry%,AU),$not($in(%_releasecomment%,Australia))),$set(_releasecomment,%_releasecomment% \(Australian Import\)))
+$if($and($eq(%releasecountry%,DE),$not($in(%_releasecomment%,German))),$set(_releasecomment,%_releasecomment% \(German Import\)))
+$if($and($eq(%releasecountry%,FI),$not($in(%_releasecomment%,Finland))),$set(_releasecomment,%_releasecomment% \(Finland Import\)))
+$if($and($eq(%releasecountry%,FR),$not($in(%_releasecomment%,France))),$set(_releasecomment,%_releasecomment% \(France Import\)))
+
+
+
+$if($in(%album%, Punk ),$set(tributetype,Punk))
+$if($in(%album%, Rock ),$set(tributetype,Rock))
+$if($in(%album%, Metal ),$set(tributetype,Metal))
+$if($in(%album%, Bluegrass ),$set(tributetype,Bluegrass))
+$if($in(%album%, Acoustic ),$set(tributetype,[Acoustic]))
+$if($in(%album%,Gothic Acoustic),$set(tributetype,[Gothic Acoustic Series]))
+$if($in(%album%,Pickin' On ),$set(tributetype,[Pickin' On Series]))
+$if($in(%album%, Industrial ),$set(tributetype,Industrial))
+$if($in(%album%, Techno ),$set(tributetype,Techno))
+$if($in(%album%,Tribute),$set(_tribute,Tributes))
+$if($in(%album%, Quartet ),$set(tributetype,[String Quartet Series]))
+$if($in(%album%,Remix),$set(tributetype,[Remixes]))
+
+$if($in(%album%,Symphonic),$set(_tribute,Tributes))
+$if($in(%album%,Symphonic),$set(tributetype,[Symphonic]))
+
+
+$if($in(%album%, Lullaby Renditions),$set(_tribute,Tributes))
+$if($in(%album%, Lullaby Renditions),$set(tributetype,[Lullaby Renditions]))
+
+$if($in(%album%, Piano ),$set(_tribute,Tributes))
+$if($in(%album%, Piano ),$set(tributetype,[Piano Series]))
+
+$if($not(%tributetype%),$set(tributetype,[Various Artists]))
+
+
+
+$if($in(%releasetype%,[Soundtracks]),$set(_tribute,Soundtracks)$unset(tributetype))
+
+
+$replace($replace($replace($replace($replace($replace($replace($replace($replace(
+
+$if($eq(%compilation%,1),
+
+$if(%_tribute%,[%_tribute%]/
+$if(%tributetype%,%tributetype%)/
+$if(%date%, [$left(%date%,4)]) - %album%
+$if(%_releasecomment%, %_releasecomment%) 
+$if($and($ne(%totaldiscs%,1),$not($in(%totaldiscs%,1))),\(%totaldiscs% Disc Set\),$noop())
+$if($gt(%totaldiscs%,1),/Disc $num(%discnumber%,2)
+$if(%discsubtitle%, - \(%discsubtitle%\)))/
+$num(%tracknumber%,2) - %artist% - %title% 
+$if(%discsubtitle%,\(%discsubtitle%\)))
+
+$if($eq(%albumartist%,Various Artists),
+$if($not(%_tribute%),Various Artists/%releasetype%/
+$if(%date%, [$left(%date%,4)]) - %album%
+$if(%_releasecomment%, %_releasecomment%) 
+$if($and($ne(%totaldiscs%,1),$not($in(%totaldiscs%,1))),\(%totaldiscs% Disc Set\),$noop())
+$if($gt(%totaldiscs%,1),/Disc $num(%discnumber%,2)
+$if(%discsubtitle%, - \(%discsubtitle%\)))/
+$num(%tracknumber%,2) - %artist% - %title% 
+$if(%discsubtitle%,\(%discsubtitle%\))))
+
+$if($not($eq(%albumartist%,Various Artists)),
+$if($not(%_tribute%),Various Artists/%releasetype%/
+$if(%date%, [$left(%date%,4)]) - %album%
+$if(%_releasecomment%, %_releasecomment%) 
+$if($and($ne(%totaldiscs%,1),$not($in(%totaldiscs%,1))),\(%totaldiscs% Disc Set\),$noop())
+$if($gt(%totaldiscs%,1),/Disc $num(%discnumber%,2)
+$if(%discsubtitle%, - \(%discsubtitle%\)))/
+$num(%tracknumber%,2) - %artist% - %title% 
+$if(%discsubtitle%,\(%discsubtitle%\)))))
+
+,*,[x]),?,),:, -),",'),_, ),|, ),<,[),>,]), , )
+
+
+$replace($replace($replace($replace($replace($replace($replace($replace($replace(
+
+$if($not($eq(%compilation%,1)),
+$if(%_tribute%,[%_tribute%]/
+$if(%tributetype%,%tributetype%)/
+$if(%date%, [$left(%date%,4)]) - %album%$if($ne(%originalyear%,$left(%date%,4)),
+$if(%originalyear%, \(%originalyear% Reissue\)))
+$if(%_releasecomment%, %_releasecomment%) 
+$if($and($ne(%totaldiscs%,1),$not($in(%totaldiscs%,1))),\(%totaldiscs% Discs\),$noop())
+$if($gt(%totaldiscs%,1),/Disc $num(%discnumber%,2)
+$if(%discsubtitle%, - \(%discsubtitle%\)))/
+%artist% - $num(%tracknumber%,2) - %title% 
+$if(%discsubtitle%,\(%discsubtitle%\)))
+
+$if($not(%_tribute%),
+$if(%_miscorincomplete%,
+$if($eq(%_miscorincomplete%,Misc),
+$if2(%grouping%,Unknown)/$if2(%genre%,Unknown)/
+$if2(%albumartistsort%,%artistsort%,%albumartist%,%artist%)/
+$if(%_misctype%,[%_misctype%]/,[Misc]/)
+%artist% -$if(%album%, %album% -) $num(%tracknumber%,2) - %title%)
+
+$if($eq(%_miscorincomplete%,Incomplete),
+$if2(%grouping%,Unknown)/$if2(%genre%,Unknown)/
+$if2(%albumartistsort%,%artistsort%,%albumartist%,%artist%)/
+$if(%_miscorincomplete%, [Incomplete Albums]/)
+$if(%date%, [$left(%date%,4)]) - %album% $if(%_numberofmissingtracks%, \($num(%_numberofmissingtracks%,2) Track$if(%_pluaralmissingtracks%,%_pluaralmissingtracks%) Missing\))
+$if($ne(%originalyear%,$left(%date%,4)),
+$if(%originalyear%, \(%originalyear% Reissue\)))
+$if(%_releasecomment%, %_releasecomment%) 
+$if($and($ne(%totaldiscs%,1),$not($in(%totaldiscs%,1))),\(%totaldiscs% Discs\),$noop())
+$if($gt(%totaldiscs%,1),/Disc $num(%discnumber%,2)
+$if(%discsubtitle%, - \(%discsubtitle%\)))/
+%artist% - $num(%tracknumber%,2) - %title% 
+$if(%discsubtitle%,\(%discsubtitle%\)))))
+
+$if($not(%_miscorincomplete%),
+$if2(%grouping%,Unknown)/$if2(%genre%,Unknown)/
+$if2(%albumartistsort%,%artistsort%,%albumartist%,%artist%)/
+$if(%releasetype%, %releasetype%/)
+$if(%date%, [$left(%date%,4)]) - %album%
+$if($ne(%originalyear%,$left(%date%,4)),
+$if(%originalyear%, \(%originalyear% Reissue\)))
+$if(%_releasecomment%, %_releasecomment%) 
+$if($and($ne(%totaldiscs%,1),$not($in(%totaldiscs%,1))),\(%totaldiscs% Discs\),$noop())
+$if($gt(%totaldiscs%,1),/Disc $num(%discnumber%,2) $if(%disctitle%, - \(%disctitle%\))
+$if(%discsubtitle%, - \(%discsubtitle%\)))/
+%artist% - $num(%tracknumber%,2) - %title% 
+$if(%discsubtitle%,\(%discsubtitle%\))))
+
+,*,[x]),?,),:, -),",'),_, ),|, ),<,[),>,]), , )
